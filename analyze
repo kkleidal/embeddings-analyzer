@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+import argparse
+import matplotlib
+import os
+if "DISPLAY" not in os.environ:
+    matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from embeddings_analyzer.analyzer import analyze, add_arguments
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Analyze embeddings.')
+    add_arguments(parser)
+    args = parser.parse_args()
+    analyze(plt=plt, **vars(args))
+

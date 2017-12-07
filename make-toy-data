@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+import argparse
+from embeddings_analyzer.toy_data import make_toy_data, add_arguments
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Make toy data for embeddings analyzer.')
+    add_arguments(parser)
+    args = parser.parse_args()
+    make_toy_data(**vars(args))
+
