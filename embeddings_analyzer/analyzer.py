@@ -196,7 +196,7 @@ def analyze(**kwargs):
 def add_arguments(parser):
     # parser.add_argument('--pca', metavar='dimensions', type=int, default=None, 'Dimensionality reduction with PCA')
     parser.add_argument('--dims', metavar='dimensions', type=int, default=3, help='Dimensionality of data')
-    parser.add_argument('--analysis', metavar='analysis-method', type=str, default="projection", choices=analysis.keys(),
+    parser.add_argument('--analysis', type=str, default="projection", choices=analysis.keys(),
             help='Analysis to run')
     parser.add_argument('-i', '--interactive', action='store_true', 
             help='If you want results displayed interactively rather than saved')
